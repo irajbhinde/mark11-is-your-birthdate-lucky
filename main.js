@@ -1,19 +1,21 @@
 var dobInput = document.querySelector(".dob-input")
 var luckynumInput = document.querySelector(".luckynum")
 var checkBtn = document.querySelector(".btn-Check")
+const outputBox = document.querySelector(".output-box")
 
 function checkBirthdateIsLucky() {
     const dob = dobInput.value
     const sum = checkSum(dob)
     if (sum && luckynumInput.value){ if (sum % luckynumInput.value == 0) {
-        console.log("Your Birthdate is lucky! 🎉")
+       outputBox.innerText = ("Your Birthdate is lucky! 🎉")
     } else {
-        console.log("Your Birthdate is not lucky 😟")
+        outputBox.innerText = ("Your Birthdate is not lucky 😟")
     }
 }
     else {
-        console.log("Enter valid input");
+        outputBox.innerText = ("Enter valid input");
     }
+
    
 }
 
